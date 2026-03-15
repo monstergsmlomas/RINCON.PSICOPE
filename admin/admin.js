@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function(){
+
 const password = "psicope123";
 
 const loginBtn = document.getElementById("loginBtn");
@@ -37,3 +39,5 @@ window.location.href = "index.html";
 }
 
 }
+
+});
