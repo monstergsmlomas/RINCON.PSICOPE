@@ -123,6 +123,7 @@ if (botonCTA) {
 
 // Render inicial
 renderCart();
+
 // ===== Checkout simulado =====
 
 const checkoutModal = document.querySelector(".checkout-modal");
@@ -166,6 +167,7 @@ if (confirmCheckout) {
     renderCart();
   });
 }
+
 // ===== Rotación automática testimonios =====
 
 const testimonials = document.querySelectorAll(".testimonial");
@@ -175,6 +177,7 @@ function showNextTestimonial() {
   testimonials[currentTestimonial].classList.remove("active");
 
   currentTestimonial++;
+
   if (currentTestimonial >= testimonials.length) {
     currentTestimonial = 0;
   }
@@ -185,6 +188,7 @@ function showNextTestimonial() {
 if (testimonials.length > 0) {
   setInterval(showNextTestimonial, 4000);
 }
+
 // ===== Modal detalles =====
 
 const detailButtons = document.querySelectorAll(".view-details");
@@ -211,4 +215,5 @@ if (closeDetails) {
     detailsModal.classList.remove("active");
   });
 }
+
 });
