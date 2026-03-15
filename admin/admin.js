@@ -1,8 +1,10 @@
 const password = "psicope123";
 
-const btn = document.getElementById("loginBtn");
+const loginBtn = document.getElementById("loginBtn");
 
-btn.addEventListener("click", () => {
+if (loginBtn) {
+
+loginBtn.addEventListener("click", () => {
 
 const input = document.getElementById("adminPassword").value;
 
@@ -19,3 +21,19 @@ document.getElementById("loginError").textContent = "Contraseña incorrecta";
 }
 
 });
+
+}
+
+
+// proteger panel
+if(window.location.pathname.includes("panel.html")){
+
+const auth = localStorage.getItem("adminAuth");
+
+if(auth !== "true"){
+
+window.location.href = "index.html";
+
+}
+
+}
